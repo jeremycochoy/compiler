@@ -12,6 +12,7 @@ def get_lexer():
 
     # Language keywords
     lg.add('PRINT', r'print(?!\w)')
+    lg.add('PASS', r'pass(?!\w)')
     lg.add('IF', 'if(?!\w)')
     lg.add('ELSE', 'else(?!\w)')
     lg.add('AND', "and(?!\w)")
@@ -21,7 +22,8 @@ def get_lexer():
     lg.add('IMPORT', 'import(?!\w)')
 
     # User identifiers
-    lg.add('IDENTIFIER', "[a-zA-Z_][a-zA-Z0-9_]")
+    lg.add('SYMBOL', ":[a-zA-Z_][a-zA-Z0-9_]+")
+    lg.add('IDENTIFIER', "[a-zA-Z_][a-zA-Z0-9_]+")
 
     # Operators
     lg.add('==', '==')
